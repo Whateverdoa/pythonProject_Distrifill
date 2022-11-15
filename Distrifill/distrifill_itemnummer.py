@@ -1,6 +1,5 @@
 import shutil
-
-from .LBLdistrifillHR import distrifill_item_rename, gebruik_shutill_en_verplaats_file_van
+from .LBLdistrifillHR import distrifill_rename, gebruik_shutill_en_verplaats_file_van
 from Path_actions.path_actions import *
 import pandas as pd
 
@@ -55,19 +54,6 @@ def item_number(padxml):
 
 
 
-
-
-# customernumbers = [(customernum(padxml), Mnumber(padxml), item_number(padxml),padxml) for padxml in dwd]
-#
-# customernum_dict = {f'{distrifill_item_rename(Mnumber(padxml))}':(distrifill_item_rename(Mnumber(padxml)), item_number(padxml),padxml) for padxml in dwd}
-#
-# Mbestandsnaam = [bestandsnaam.stem for bestandsnaam in glob_dwd_pdf]
-
-
-# originalpad=customernum_dict['lBL_001410810_HR_2'][2]
-# dest1 = pad_naar_esko.joinpath((str(customernum_dict['lBL_001410810_HR_2'][1])+".pdf"))
-# dest2 =pad_voor_verzamelen.joinpath((str(customernum_dict['lBL_001410810_HR_2'][1])+".pdf"))
-# twee_adres_paren =  [(originalpad,dest1),(originalpad,dest2)]
 
 def tuple_destinies(gekozen_pad,dictionairy,key):
     """ looking with key in dictionairy to find the original path
